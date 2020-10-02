@@ -1,0 +1,64 @@
+using System;
+
+namespace Labrab_3_YP
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double g, h, b, q, x, y, w, c;
+            Console.Write("Введите g: ");
+            g = Convert.ToSingle(Console.ReadLine());
+
+            Console.Write("Введите h: ");
+            h = Convert.ToSingle(Console.ReadLine());
+
+            Console.Write("Введите b: ");
+            b = Convert.ToSingle(Console.ReadLine());
+
+            Console.Write("Введите q: ");
+            q = Convert.ToSingle(Console.ReadLine());
+
+            Console.Write("Введите x: ");
+            x = Convert.ToSingle(Console.ReadLine());
+
+            Console.Write("Введите y: ");
+            y = Convert.ToSingle(Console.ReadLine());
+
+            Console.Write("Введите w: ");
+            w = Convert.ToSingle(Console.ReadLine());
+
+            c = Math.Cos(g * h) + b * Math.Sqrt(q * 3) - Math.Abs(x - y) / w;
+
+            string result = String.Format("{0:C2}", c);
+            Console.WriteLine("Ответ: " + result);
+
+            int p = Convert.ToInt32(c);
+
+            result = String.Format("{0:D}", p);
+            Console.WriteLine("Ответ: " + result);
+
+            result = String.Format("{0:E2}", c);
+            Console.WriteLine("Ответ: " + result);
+
+            result = String.Format("{0:F2}", c);
+            Console.WriteLine("Ответ: " + result);
+
+            result = String.Format("{0:G2}", c);
+            Console.WriteLine("Ответ: " + result);
+
+            result = String.Format("{0:N2}", c);
+            Console.WriteLine("Ответ: " + result);
+
+            decimal o = Convert.ToDecimal(c);
+
+            result = String.Format("{0:P1}", o);
+            Console.WriteLine("Ответ: " + result);
+
+            int l = Convert.ToInt32(c);
+
+            result = String.Format("{0:X}", l);
+            Console.WriteLine("Ответ: " + result);
+        }
+    }
+}
