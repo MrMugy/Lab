@@ -1,0 +1,44 @@
+static void Main(string[] args)
+        {
+            double X, Y, otvet;
+            int col_slag, stepenY, stepenX, x1, x2, y1, y2;
+            char cont;
+            do
+            {
+                otvet = 0;
+                stepenX = 2;
+                stepenY = 4;
+                x1 = 1;
+                x2 = 3;
+                y1 = 3;
+                y2 = 5;
+                Console.Write("Введите X: ");
+                X = Convert.ToSingle(Console.ReadLine());
+                Console.Write("Введите Y: ");
+                Y = Convert.ToSingle(Console.ReadLine());
+                Console.Write("Введите количество слагаемых: ");
+                col_slag = int.Parse(Console.ReadLine());
+                for (int i = 1; i <= col_slag; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        otvet -= Math.Pow(Y, stepenY) / (y1 * y2);
+                        stepenY += 4;
+                        y1 += 4;
+                        y2 += 4;
+                    }
+                    else
+                    {
+                        otvet += Math.Pow(X, stepenX) / (x1 * x2);
+                        stepenX += 4;
+                        x1 += 4;
+                        x2 += 4;
+                    }
+                }
+                Console.WriteLine("Ответ: {0:F3}", otvet);
+                Console.WriteLine("Для повтора нажмите (y)");
+                cont = Convert.ToChar(Console.ReadLine());
+                Console.Clear();
+            }
+            while (cont == 'y');
+        }
